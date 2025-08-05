@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    <h1>TaskFlow</h1>
+                </div>
+                <p class="subtitle">Organize your life, one task at a time</p>
+            </div>
+        </header>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <p class="stat-label">Total Tasks</p>
+                            <p class="stat-value" id="total-tasks">0</p>
+                        </div>
+                        <div class="stat-icon">📊</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <p class="stat-label">Completed</p>
+                            <p class="stat-value completed" id="completed-tasks">0</p>
+                        </div>
+                        <div class="stat-icon">✅</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <p class="stat-label">Pending</p>
+                            <p class="stat-value pending" id="pending-tasks">0</p>
+                        </div>
+                        <div class="stat-icon">⏳</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <div class="stat-info">
+                            <p class="stat-label">Progress</p>
+                            <p class="stat-value progress" id="progress-rate">0%</p>
+                        </div>
+                        <div class="stat-icon">🎯</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Add Task Form -->
+        <section class="add-task-section">
+            <form id="add-task-form" class="add-task-form">
+                <div class="form-group">
+                    <input 
+                        type="text" 
+                        id="task-input" 
+                        placeholder="Add a new task..." 
+                        maxlength="200"
+                        required
+                    >
+                    <div class="error-message" id="error-message"></div>
+                </div>
+                
+                <div class="form-controls">
+                    <div class="control-group">
+                        <label for="priority-select">Priority</label>
+                        <select id="priority-select">
+                            <option value="high">🔥 High</option>
+                            <option value="medium" selected>⚡ Medium</option>
+                            <option value="low">🌱 Low</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="category-select">Category</label>
+                        <select id="category-select">
+                            <option value="Personal">Personal</option>
+                            <option value="Work">Work</option>
+                            <option value="Shopping">Shopping</option>
+                            <option value="Health">Health</option>
+                            <option value="Learning">Learning</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="add-btn">
+                        <span class="btn-icon">+</span>
+                        Add Task
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Filters -->
+        <section class="filters-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search tasks..."
+                    class="search-input"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Tasks</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <div class="additional-controls">
+                    <select id="category-filter" class="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Work">Work</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Health">Health</option>
+                        <option value="Learning">Learning</option>
+                    </select>
+                    
+                    <button id="clear-completed" class="clear-btn" style="display: none;">
+                        🗑️ Clear Completed
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task List -->
+        <section class="tasks-section">
+            <div id="tasks-container" class="tasks-container">
+                <div id="empty-state" class="empty-state">
+                    <div class="empty-icon">✅</div>
+                    <p class="empty-title">No tasks found</p>
+                    <p class="empty-subtitle">Add a new task to get started!</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
