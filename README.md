@@ -29,7 +29,7 @@ A modern and responsive to-do list web application built using **HTML**, **CSS**
 
 ## 🚀 Live Demo
 
-> [Live Demo Link (Optional)](https://your-live-link-if-deployed.com)
+> [Live Demo Link (Optional)](https://shivakumarguntoju.github.io/To-Do-List-frontend/)
 
 ---
 
