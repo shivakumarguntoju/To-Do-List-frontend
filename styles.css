@@ -622,3 +622,49 @@ body {
         text-align: center;
     }
 }
+/* Add date controls to be similar to selects */
+#from-date-input,
+#due-date-input,
+#reminder-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 0.9rem;
+}
+
+#reminder-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+#due-date-input::-webkit-calendar-picker-indicator,
+#from-date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.form-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) repeat(2, 1.2fr) 1.2fr;
+    gap: 1rem;
+    align-items: end;
+}
+@media (max-width: 1024px) {
+    .form-controls {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 700px) {
+    .form-controls {
+        grid-template-columns: 1fr;
+    }
+}
+.task-dates .task-date-label {
+    color: #c7d2fe; font-size: 0.85em;
+}
+.task-dates .reminder-time {
+    color: #fbbf24; font-weight: bold;
+    background: rgba(251,191,36,0.09); border-radius: 8px; padding:2px 5px; margin-left:7px;
+}

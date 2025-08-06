@@ -65,47 +65,73 @@
         </section>
 
         <!-- Add Task Form -->
-        <section class="add-task-section">
-            <form id="add-task-form" class="add-task-form">
-                <div class="form-group">
-                    <input 
-                        type="text" 
-                        id="task-input" 
-                        placeholder="Add a new task..." 
-                        maxlength="200"
-                        required
-                    >
-                    <div class="error-message" id="error-message"></div>
-                </div>
-                
-                <div class="form-controls">
-                    <div class="control-group">
-                        <label for="priority-select">Priority</label>
-                        <select id="priority-select">
-                            <option value="high">🔥 High</option>
-                            <option value="medium" selected>⚡ Medium</option>
-                            <option value="low">🌱 Low</option>
-                        </select>
-                    </div>
-                    
-                    <div class="control-group">
-                        <label for="category-select">Category</label>
-                        <select id="category-select">
-                            <option value="Personal">Personal</option>
-                            <option value="Work">Work</option>
-                            <option value="Shopping">Shopping</option>
-                            <option value="Health">Health</option>
-                            <option value="Learning">Learning</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="add-btn">
-                        <span class="btn-icon">+</span>
-                        Add Task
-                    </button>
-                </div>
-            </form>
-        </section>
+<!-- Add Task Form -->
+<section class="add-task-section">
+    <form id="add-task-form" class="add-task-form">
+        <div class="form-group">
+            <input 
+                type="text" 
+                id="task-input" 
+                placeholder="Add a new task..." 
+                maxlength="200"
+                required
+            >
+            <div class="error-message" id="error-message"></div>
+        </div>
+        
+        <div class="form-controls">
+            <div class="control-group">
+                <label for="priority-select">Priority</label>
+                <select id="priority-select">
+                    <option value="high">🔥 High</option>
+                    <option value="medium" selected>⚡ Medium</option>
+                    <option value="low">🌱 Low</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="category-select">Category</label>
+                <select id="category-select">
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Health">Health</option>
+                    <option value="Learning">Learning</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="from-date-input">From Date</label>
+                <input 
+                    type="date" 
+                    id="from-date-input"
+                    min=""
+                >
+            </div>
+            <div class="control-group">
+                <label for="due-date-input">Due Date</label>
+                <input 
+                    type="date" 
+                    id="due-date-input"
+                    min=""
+                >
+            </div>
+            <div class="control-group">
+                <label for="reminder-input">Reminder</label>
+                <input 
+                    type="datetime-local" 
+                    id="reminder-input"
+                    min=""
+                >
+            </div>
+
+            <button type="submit" class="add-btn">
+                <span class="btn-icon">+</span>
+                Add Task
+            </button>
+        </div>
+    </form>
+</section>
+
 
         <!-- Filters -->
         <section class="filters-section">
